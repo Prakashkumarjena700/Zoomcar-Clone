@@ -5,45 +5,309 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="/exuberant-chicken-538/images/icon.jpeg">
+    <link rel="icon" type="image" href="/exuberant-chicken-538/image/icon.png">
     <title>Self Drive Car Rentals in Bhubaneswar</title>
-    <style>
-        * {
-            margin: 0px;
-        }
-
-        #navbar {
-            padding: 14px;
-            background-color: black;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #navbar #first {
-            height: 27px;
-            width: 18px;
-            margin: 0px 7px 6px 5px;
-        }
-        #navbar #end a{
-            margin-right: 100px;
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/exuberant-chicken-538/navbar.css">
 </head>
+<style>
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    #box2 {
+        height: 265px;
+        width: 75%;
+        margin: auto;
+        display: flex;
+        gap: 4%;
+        margin-top: -70px;
+    }
+
+    #box2>div {
+
+        height: 100%;
+        width: 48%;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border: 1px solid rgb(195, 192, 192);
+    }
+
+    #first1 #start1 {
+        width: 100%;
+        height: 80%;
+        display: flex;
+    }
+
+    #first1 #start1 div {
+        height: 100%;
+        width: 58%;
+    }
+
+    #first1 #start1 div:last-child {
+        height: 100%;
+        width: 38%;
+        padding-left: 15px;
+    }
+
+    #first1 #start1 div:first-child {
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+
+    p {
+        padding-top: 15px;
+    }
+
+    #start1 img {
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 5px;
+    }
+
+    #end1 {
+        border-top: 1px solid rgb(195, 192, 192);
+        padding-bottom: 13px;
+    }
+
+    #end1 span {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: green;
+    }
+
+    #second1 {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    #second1 div {
+        height: 100%;
+        width: 66%;
+        padding-top: 15px;
+
+    }
+
+    #second1 div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        padding-right: 10px;
+    }
+
+    #second1 img {
+        height: 75%;
+    }
+
+    #second1 .offer {
+        border: 2px dashed rgb(214, 211, 211);
+        position: relative;
+        margin: 20px 0px 10px 10px;
+        padding: 10px 0px 10px 13px;
+        color: rgb(186, 185, 185);
+    }
+
+    #second1 .dis {
+        font-weight: bold;
+        font-size: 22px;
+        color: rgb(32, 220, 32);
+        margin-left: 10px;
+    }
+
+    #second1 h2,
+    p {
+        margin-left: 10px;
+    }
+
+    .dis1 {
+        margin-left: 0px;
+    }
+    #box3 {
+        height: 1111px;
+        width: 100%;
+        background-color: #f4f4f4;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 25px;
+        grid-template-areas:
+            "b1 b2 "
+            "b3 b4 "
+            "b5 b5";
+        padding: 25px 12%;
+        box-sizing: border-box;
+    }
+    #box3 div:nth-child(1) {
+        grid-area: b1;
+    }
+
+    #box3 div:nth-child(2) {
+        grid-area: b2;
+    }
+
+    #box3 div:nth-child(3) {
+        grid-area: b3;
+    }
+
+    #box3 div:nth-child(4) {
+        grid-area: b4;
+    }
+
+    #box3 div:nth-child(5) {
+        
+        grid-area: b5;
+    }
+    #box3 img{
+      height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+</style>
+<style>
+   #box4 {
+    height: 180px;
+    width: 76%;
+  
+    margin: auto;
+   
+    display: flex;
+    gap: 2%;
+}
+#box4 div{
+    height: 100%;
+    width: 33%;
+ 
+   
+}
+#box4 img{
+    height: 100%;
+    width: 100%;
+}
+#off{
+    margin-top: 68px;
+    margin-left: 150px;
+    font-weight: bold;
+}
+</style>
+<style>
+    #box5{
+       background-color: #f4f4f4;
+        height: 40px;
+        margin-top: 20px;
+        padding-left: 45%;
+        margin-bottom: 40px;
+       
+    }
+    #box5 select{
+        height: 100%;
+        margin: 0px;
+       border: 0px;
+       width: 76px;
+       background-color: #f4f4f4;
+      
+       
+    }
+    
+    #box6 img{
+        height: 250px;
+        width: 19%;
+        margin-left: 20px;
+    }
+</style>
 
 <body>
     <div id="navbar">
         <div id="start">
-            <img id="first" src="/exuberant-chicken-538/images/Untitled design.jpg" alt="">
+            <img id="first" src="/exuberant-chicken-538/image/Untitled design - Copy.jpg" alt="">
             <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" alt="">
         </div>
         <div id="end">
-            <a href="">Become a Host</a>
-            <a href="">ZMS</a>
-            <a href="">Login/Signup</a>
+            <a href="/exuberant-chicken-538/host.html">Become a Host</a>
+            <a href="/exuberant-chicken-538/zms.html">ZMS</a>
+            <a href="/exuberant-chicken-538/login.html">Login/Signup</a>
         </div>
+    </div>
+    <img src="https://www.zoomcar.com/img/bg-desktop.png" alt="">
+    <div id="data">
+        <p>Round Trip <span>v</span> </p>
+        <input type="text" placeholder=" . Pick Up City, Airport, Address Hotel ">
+        <input type="text" placeholder="FIND CARS">
+    </div>
+    <div id="box2">
+
+        <div id="first1">
+            <div id="start1">
+                <div>
+                    <h3>Do your friends like a weekend getaway?</h3>
+                    <p class="dis1">You earn 1200 in Z-Points. Your friend gets 40% off on first booking</p>
+                </div>
+                <div>
+                    <img src="https://zoomcar-assets.zoomcar.com/images/original/1e3becafed3e6151b17c104858b336bb7e076c11.jpeg?1658213048"
+                        alt="">
+                </div>
+            </div>
+            <div id="end1">
+                <p> <span>&#8594</span> REFER FRIENDS</p>
+            </div>
+        </div>
+        <div id="second1">
+            <div>
+                <h2>UP TO 50% OFF</h2>
+                <p>on your first booking from the app!</p>
+                <h2 class="offer">Use Code: ZOOMAPP</h2>
+                <p class="dis">Install Zoomcar App now!</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/img/cellphone.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div id="box3">
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/pictures/original/418d6028cb695a1f4c51e31d190361c03493e257.jpeg?1655973605" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/pictures/original/d70e7f58da384df0f3ba169cf19e8e931879c66c.jpeg?1652354515" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/pictures/original/e3dfe0ed91abc29facaf56a327b4498ce4e9b75e.jpeg?1652363808" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/pictures/original/55c3970a33c8f4d10dd3c9ace39d20e32af5c8ba.jpg?1651758755" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/pictures/original/1d8cdddd9d45435cbe1b4a5389a5879fc19dc179.jpeg?1652363899" alt="">
+        </div>
+     </div>
+
+     <p id="off" >OFFERS</p>
+     <div id="box4">
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/photos/original/0d948091d1befad4507bd5710ad03a309f5b5345.jpg?1651837793" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/photos/original/1d96a8389f06beb050e83374b5e3ac9cb448e54c.jpg?1655705601" alt="">
+        </div>
+        <div>
+            <img src="https://zoomcar-assets.zoomcar.com/photos/original/67aa017f464b45e52f7bc9a206245e5f15f5a316.jpg?1655478529" alt="">
+        </div>
+     </div>
+
+    <div id="box5" >
+        <select name="" id="about">
+            <option value="">About us</option>
+            <option value="">Zoomcar Team</option>
+            <option value="">Zoomcar Subscription</option>
+            <option value="">Zoomcar Blog </option>
+            <option value="">Careers @ Zoomcar</option>
+         </select>
+    </div>
+    <div id="box6" >
+        <img  id="last" src="https://www.zoomcar.com/build/6b51f1464b17dbb1d002f16e26572662.png" alt="">
+
     </div>
 
 </body>
