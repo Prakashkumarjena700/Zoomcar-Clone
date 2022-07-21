@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="https://cdn.shopper.in/images/store-logos/mobile-zoomcar-com.png">
+    <title>Share your car & Earn | Zoomcar</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        #navbar {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(15, 15, 15);
+            position: fixed;
+            z-index: 5;
+        }
+
+        #navbar div {
+            height: 100%;
+            width: 45%;
+        }
+
+        #start {
+            padding-left: 74px;
+        }
+
+        #start img:first-child {
+            height: 70%;
+            width: 24px;
+            margin-right: 15px;
+        }
+
+        #end {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        #end a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 14px;
+        }
+
+        #end a:last-child {
+            background-color: #10a310;
+            padding: 10px 15px;
+            border-radius: 3px;
+        }
+    </style>
+
+    <style>
+        #box2 {
+            width: 90%;
+            height: 100px;
+            margin: auto;
+        }
+
+        #box2 img {
+            margin-top: 59px;
+            height: 363px;
+            width: 100%;
+        }
+
+        #box2>div {
+            color: white;
+
+            position: absolute;
+            bottom: 152px;
+            width: 37%;
+            margin-left: 80px;
+            height: 60%;
+
+        }
+
+        #box2>div p:first-child {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 57px;
+        }
+
+        #box2>div p {
+            margin: 30px 0px 10px 0px;
+        }
+
+        #box2>div p:last-child {
+            background-color: #10a310;
+            display: inline-block;
+            padding: 13px 17px;
+            border-radius: 5px;
+
+        }
+
+        video {
+            border: 1px solid rgb(255, 253, 253);
+            margin-left: 16%;
+            margin-top: 350px;
+        }
+    </style>
+    <style>
+        #box3 {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        #box4 {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            font-size: 44px;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+    </style>
+
+    <style>
+        #container {
+            height: auto;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            row-gap: 40px;
+        }
+
+        #container img {
+            height: 85%;
+            width: 90%;
+            border-radius: 10px;
+            margin-left: 47px;
+        }
+
+        #container h2 {
+            margin-bottom: 20px;
+        }
+
+        #container p {
+            font-size: 17px;
+            color: gray;
+        }
+
+        #container span {
+            color: #10a310;
+            text-decoration: underline;
+        }
+
+        #container #left img {
+            margin-left: 0px;
+        }
+    </style>
+
+    <style>
+        #protect {
+            margin-left: 80px;
+            margin-bottom: 20px;
+            font-size: 40px;
+            font-weight: 600;
+
+        }
+
+        #container2 {
+            height: auto;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        #container2 div {
+            height: 100%;
+            width: 33%;
+        }
+
+        #container2 img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        #container2 .head {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 10px 0px;
+        }
+
+        #container2 .para {
+            color: gray;
+        }
+    </style>
+
+    <style>
+        #gro {
+            font-size: 40px;
+            font-weight: 600;
+            margin: 90px 100px 70px 100px;
+        }
+
+        .pa {
+            margin-left: 90px;
+            margin-bottom: 30px;
+
+        }
+
+        #container3 {
+            height: auto;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #container3 div {
+            height: 100%;
+            border-right: 2px solid rgb(174, 174, 174);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container3 .mid {
+            margin: 23% 0%;
+        }
+
+        #container3 .end {
+            color: rgb(158, 156, 156);
+            font-weight: 500;
+        }
+
+        #container3 div:last-child {
+            border: none;
+        }
+    </style>
+    <style>
+        #container4 {
+            margin: 90px 90px 30px 130px;
+
+        }
+
+        #container4 p {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        #container4 span {
+            color: #10a310;
+        }
+
+        #container4 button {
+            margin: 30px 0px;
+            padding: 10px 15px;
+            background-color: #10a310;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 17px;
+            display: block;
+        }
+
+        #container4 a {
+            color: #10a310;
+        }
+    </style>
+    <style>
+        #container5 {
+
+            height: auto;
+            width: 85%;
+            margin: auto;
+            margin-top: 0px;
+            background-color: black;
+            color: white;
+            padding-left: 40px;
+            padding-top: 30px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, black, rgb(52, 51, 51));
+            padding-bottom: 20px;
+        }
+
+        #container5 .start {
+            font-family: IBM Plex Sans;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: .24px;
+            display: inline-block;
+
+
+        }
+
+        #container5 img {
+            height: 230px;
+            width: 370px;
+            position: absolute;
+            right: 300px;
+
+        }
+
+        #container5 button {
+            margin: 20px 0px;
+            color: white;
+            background-color: #10a310;
+            padding: 10px 15px;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+    </style>
+    <style>
+        .vd {
+            position: absolute;
+            top: 3450px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 0%;
+        }
+
+        #container6 {
+            height: 320px;
+            width: 89%;
+            margin: auto;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            margin-top: 40px;
+            padding-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .par {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 400;
+
+        }
+    </style>
+    <style>
+        #container7 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            background-color: #f4f4f4;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 30px 0px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        #container7 div:first-child {
+            padding-left: 20px;
+        }
+
+        #container7 img {
+            width: 100%;
+        }
+    </style>
+    <style>
+        #container8 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+
+        }
+
+        #container8 div:first-child {
+            height: 100%;
+            width: 25%;
+            padding-top: 20px;
+        }
+
+        #container8 p {
+            font-size: 50px;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        #container8 div:last-child {
+            height: 100%;
+            width: 70%;
+        }
+
+        details {
+            padding-right: 10px;
+            border-bottom: 1.5px solid rgb(193, 193, 193);
+        }
+
+        details>summary {
+            list-style: none;
+            padding: 20px 0px;
+            font-weight: 600;
+        }
+
+        #container8 details:last-child {
+            border: none;
+        }
+
+        #container8 img {
+            float: right;
+
+        }
+    </style>
+    <style>
+        #container9 {
+            height: auto;
+            width: 90%;
+             display: flex;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+
+        #container9 div:first-child {
+            height: 100%;
+            width: 30%;
+
+            font-size: 40px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        #container9 div:last-child {
+            height: 100%;
+            width: 68%;
+            border: 1px solid rgb(192, 192, 192);
+            padding-left: 20px;
+            padding-bottom: 20px;
+            border-radius: 3px;
+        }
+
+        #container9 img {
+            position: absolute;
+            height: 120px;
+            right: 200px;
+            z-index: -1;
+
+        }
+
+        #container9 .one1 {
+            font-size: 19px;
+            font-weight: 500;
+            margin: 10px 0px;
+        }
+
+        #container9 span {
+            color: #10a310;
+            font-weight: 500;
+
+        }
+
+        #container9 span:last-child {
+            margin-left: 250px;
+        }
+
+        .two2 {
+            margin-bottom: 30px;
+            color: rgb(180, 180, 180);
+        }
+    </style>
+    <style>
+        #container10 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            background-color: #f4f4f4;
+            
+        }
+
+        #container10 img {
+            margin: 30px 0px 30px 20px;
+        }
+       details{
+            margin-left: 100px;
+            margin-right: 60px;
+        }
+        
+        h4{
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="start">
+            <img src="/exuberant-chicken-538/image/Untitled design.jpg" alt="">
+            <img src="https://www.zoomcar.com/zap/subscribe/build/7f1998e5f3e2ea1ad605b2203aef2ac5.svg" alt="">
+        </div>
+        <div id="end">
+            <a href="/exuberant-chicken-538/host.html">Contact US</a>
+            <a href="/exuberant-chicken-538/zms.html">FAQs</a>
+            <a href="/exuberant-chicken-538/login.html">Refer & Earn</a>
+            <a href="/exuberant-chicken-538/login.html">Sign Up/Log In</a>
+            <a href="/exuberant-chicken-538/login.html">START EARNING</a>
+        </div>
+    </div>
+
+    <div id="box2">
+        <img src="	https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg" alt="">
+        <div>
+            <p> Share your car and earn upto ₹ 50,000 per month</p>
+            <p> Get upto ₹ 7,500 on sing-up</p>
+            <p>START EARNING</p>
+        </div>
+    </div>
+
+
+    <video width="900" height="500" controls loop>
+        <source src="https://www.zoomcar.com/zap/subscribe/build/64440836bb2a2ee19961407349dece57.mp4" type="video/mp4">
+    </video>
+
+    <img id="box3" src="https://www.zoomcar.com/zap/subscribe/build/1894be895050c93aa9339988c5c20a23.png" alt="">
+    <p id="box4"> 3 Simple steps to Start Earning with your car in 24 hours</p>
+
+    <div id="container">
+        <div>
+            <h2>1. Sign up for Free!</h2>
+            <p>Become part of the Zoomcar Host program for absolutely free by filling up a short <span>from</span> after
+                sign-up. It takes less than 2 mins to fill the form. No hidden charges.</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/bb6776beb9b8bacdc711e5a43f401134.svg" alt="">
+        </div>
+        <div id="left">
+
+            <img src="https://www.zoomcar.com/zap/subscribe/build/29d798d8bc5d57bf22445ed3cc67cff1.svg" alt="">
+        </div>
+        <div>
+            <h2>2. Set your account for sharing</h2>
+            <p>Once you have signed up on the app, you can download the Zoomcar Host app and within 2-4 business hours,
+                your profile will be available for login. Provide your KYC details & sharing location and you are now
+                ready to share your car</p>
+        </div>
+        <div>
+            <h2>3. Share your car and Earn</h2>
+            <p>Share your car through the app by selecting the dates when your car is available. Our experts will visit
+                your location at the start of sharing and install the safety devices in your car. Now you are ready to
+                receive bookings and earn</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/fc0cb48e9b85b44423a6660ba79ad43e.svg" alt="">
+        </div>
+    </div>
+
+
+    <p id="protect">How we protect your car</p>
+    <div id="container2">
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/e2bfa54a9b46567921c3f14e1276c68e.svg" alt="">
+            <p class="head">We cover major damages & repair</p>
+            <p class="para">Zoomcar provides damage cover and repair handling in case of an unlikely incident of any
+                accident
+                incurred by a guest during the sharing period/when your car is serving a booking.</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/1f4b5b69d928bbf104735bdea4914f79.svg" alt="">
+            <p class="head">Your Car Stays in Safe Hands!</p>
+            <p class="para">All our renters are verified individuals with valid Driving license, and have excellent
+                driving stats in the past on our platform. We have complete contact and address details of all our
+                renters.</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/eb002ff59dd838a60fd664d21539d877.svg" alt="">
+            <p class="head">Contactless sharing</p>
+            <p class="para">Our Keyless technology enables contactless pick-up & drop of your car.</p>
+        </div>
+    </div>
+
+    <p id="gro">Growing rapidly</p>
+    <p class="pa">Join Host program and be part of the largest tech enabled car sharing marketplace.</p>
+    <div id="container3">
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/e3a6d127cac35a3a7a139256bb3761eb.png" alt="">
+            <h2 class="mid">25,000+</h2>
+            <p class="end">Satisfied hosts</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/4a5f55fc81b9a6df6a460a025fdfa509.png" alt="">
+            <h2 class="mid">50lakh+</h2>
+            <p class="end">Bookings served</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/36da13bf403485c4efacd507efd93735.png" alt="">
+            <h2 class="mid">32Cr+</h2>
+            <p class="end">KMs Run</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/c0db9479a08980b830b63433f60d336c.png" alt="">
+            <h2 class="mid">₹300Cr+</h2>
+            <p class="end">Earned by hosts</p>
+        </div>
+
+
+    </div>
+
+    <div id="container4">
+        <p>Share your <span>XUV 500 V </span> <br>and earn up to <span>₹ 49,980 </span> per month </p>
+        <button>CALCULATE EARNING</button>
+        <a href="#">
+            How do we estimate your earning?
+        </a>
+    </div>
+
+    <div id="container5">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/b561826c55602da000820bda8422a23d.webp" alt="">
+        <p class="start">You Earn ₹7,500/- <br>Your Friend Gets upto <br> ₹7,500/- </p><br><span class="you">You Both
+            Win</span>
+        <br>
+        <button>REFER AND EARN</button>
+        <p>This opportunity is for your friends in Bangalore, Pune, Delhi NCR, Mumbai, Chennai, Hyderabad, Chandigarh,
+            Kolkata, Ahmedabad, Coimbatore, Indore, Jaipur, Mangalore, Mysore, Vizag, Goa, Nagpur, Kochi, Vijayawada,
+            Siliguri, Bhopal, Lucknow, Guwahati, Bhubaneswar, Vadodara, Nashik, Trichy & Madurai only.</p>
+        <p>
+            Refer multiple friends to earn upto ₹ 1 Lakh.
+        </p>
+
+    </div>
+
+
+    <div id="container6">
+        <p class="par">Users love Zoomcar Host program. Our app has 4.5+ rating on play store!</p>
+        <video height="400" width="89%" controls class="vd" loop>
+            <source src="https://www.zoomcar.com/zap/subscribe/build/993b9e144e89da0b2a0df580e13a2cbe.mp4">
+        </video>
+    </div>
+
+    <div id="container7">
+        <div>
+            <h2>What are the host users saying?</h2>
+            <p>10,000+ hosts are earning average of ₹ 50,000 per month</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/3f72230754b1fb30e311c9f78848ee62.png" alt="">
+            <p>I always dreamt of owning a car in which I can take my family for a drive, But, due to high EMIs, I
+                couldn't afford a car. With host program, I reduced my EMI by sharing the car on weekdays and take my
+                family out on weekends. I am happy that I could finally realise my dream, thanks to host.</p>
+            <br>
+            <p>
+                Gajendra Tomar, Age 38
+            </p>
+            <p>
+                Govt School Teacher, Pune
+            </p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/bd8cb705e0b100c897e16bbfff2a275f.png" alt="">
+            <p>I am an environmentally conscious person. I saw a wonderful opportunity to do something for congested
+                roads and the environment with host program. Sharing my second car on host helps me to reduce traffic
+                and reduce my carbon footprint. And yes, additional earning through my second car is cherry on the cake
+                :)</p>
+            <br>
+            <p>
+                Srikanth Venkatesh, Age 43
+            </p>
+            <p>
+                VP in an IT Company, Hyderabad
+            </p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/5c4df7d7677b23ee3d6c5e32e964303e.png" alt="">
+            <p>I bought a car recently. But, ended up using it only once or twice a week for errands and grocery visits.
+                I saw a great way to earn additional money through the host program while also having the car to myself
+                on weekends for my grocery visits. It is a win-win situation for me.</p>
+            <br>
+            <p>
+                Archana Sundaram, Age 55
+            </p>
+            <p>
+                Housewife, Hyderabad
+            </p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/9f1be46d5b847adf8089338ebb6d89d8.png" alt="">
+            <p>I am a travel enthusiast and use my car to explore new places. I prefer taking public transport to
+                office, because of which my car stays idle during the weekdays. So, I decided to share my car on host.
+                Now, I earn extra bucks for my travel expenses :)</p>
+            <br>
+            <p>
+                Shishir Gupta, Age 28
+            </p>
+            <p>
+                Young urban professional, Pune
+            </p>
+        </div>
+    </div>
+
+    <div id="container8">
+        <div>
+            <p>Still have questions?</p>
+
+        </div>
+        <div>
+            <details>
+                <summary>Do I need to meet the renters of my car? <img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                We have installed the keyless entry devices in your car, which makes sure that you need not meet any of
+                the renters in person, either at the start, or at the end of any booking.
+            </details>
+            <details>
+                <summary>How will I get Paid? <img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                Your total earnings will be credited to your bank account every week. You can access your detailed
+                earnings through our Zoomcar Host app.
+            </details>
+            <details>
+                <summary>What happens if my car gets challans or traffic fines while my car is being shared? <img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                Zoomcar will take care of all challans incurred during car sharing.
+            </details>
+            <details>
+                <summary>How much will I earn? <img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                You will earn 60% of the booking revenue that your car earns on every booking. Your earnings will be
+                paid to you on a weekly basis. Use our quick to see how much you can earn by sharing the car.
+            </details>
+            <details>
+                <summary>How is the price of my car decided?<img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                Our intelligent demand based pricing system optimizes the price of your car. We also send you suggestion
+                for peak seasons to share your car. We ensure you get maximum earning while sharing the car.
+            </details>
+            <details>
+                <summary>Why are safety devices installed?<img
+                        src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+                </summary>
+                These are Zoomcar's proprietary tech devices. They are installed in the car to keep track of car health
+                and location of your car. It keeps your car safe when shared with Guests.
+            </details>
+
+        </div>
+    </div>
+
+    <div id="container9">
+        <div>
+            <p>Still confused ?</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/1481c0a139f0327896e2b071d9e392bd.svg" alt="">
+            <p class="one1">We are here to help</p>
+            <p class="two2">Visit detailed FAQs section or contact us for more details.</p>
+            <span>FAQ</span><span>CONTACT US</span>
+        </div>
+    </div>
+
+    <div id="container10">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/5335b9a2cd132fc5c25ea3fec1177b02.svg" alt="">
+    </div>
+
+    <details>
+        <summary>More about Zoomcar Host</summary>
+        <h4>What is Zoomcar Host?</h4>
+        <p>
+            Zoomcar Host is a new program for private car owners to earn rewards and reduce ownership cost by sharing
+            their cars on the Zoomcar platform while they are not in use. All you have to do is share your car as per
+            your convenience. Now reduce the idle time of your car and recover the related expenses with Zoomcar Host.
+            Share and earn, on the go.
+        </p>
+        <h4>Why choose Zoomcar Host?</h4>
+        <p>
+            Apart from its convenience, Zoomcar Host lets you earn money on an otherwise depreciating asset and do your
+            bit for the environment by reducing carbon footprint. And with its flexibility, advanced keyless technology
+            and accidental insurance coverage, you are in for a fully guided, hassle-free experience. If youre
+            concerned about the safety aspects of this arrangement, youd be delighted to know that Zoomcar Host
+            practices minimal human interaction. At Zoomcar Host, we also perform a meticulous background check of the
+            renter to ensure safety and security.
+        </p>
+        <h4>Sharing personal car on Zoomcar Host</h4>
+        <p>
+            Paperwork can be boring and tiring. But we wont make you sit through a long procedure. All you need to do
+            is visit the Zoomcar Host website, select your city, log in and agree to the terms and conditions. Enter
+            your personal and car details, upload documents, and voila! Youre done. A dedicated Zoomcar relationship
+            manager will meet you and help you out with the paperwork. After this, he will pick up your car and get the
+            car safety devices and keyless entry devices installed. Your car is all set to accept bookings.
+        </p>
+        <h4>Why does Zoomcar Host stand out?</h4>
+        <p>
+            Zoomcar Host lets you share, sit back and earn from home. You can share your cars for free and watch your
+            earnings grow. Once you register with us, you will get paid on a monthly basis through direct deposit. You
+            can also reduce your car ownership cost by cutting down on maintenance and other expenses. By sharing your
+            car, you are going to recover investment in a depreciating asset. You are reducing the idle time of your car
+            by sharing it on Zoomcar Host ,as per your convenience.
+        </p>
+    </details>
+
+
+</body>
+
+</html>
