@@ -1,12 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zms</title>
+    <title>https://www.zoomcar.com/zoomcar-mobility-services</title>
 </head>
-<body>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    #navbar {
+
+        height: 60px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #navbar div {
+        height: 70%;
+        width: 11%;
+
+        padding-top: 15px;
+    }
+
+    #navbar img {
+        height: 60%;
+    }
+
+    #navbar button {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+
+    }
+
+    #navbar div:last-child {
+        padding-top: 0%;
+    }
+
+    #banner {
+        height: 500px;
+        width: 100%;
+        background-color: #10a310;
+        margin-bottom: 40px;
+    }
+
+    #banner img {
+        height: 97%;
+        width: 100%;
+    }
+
+    #banner div {
+        width: 41%;
+        text-align: center;
+        position: absolute;
+        bottom: 135px;
+        left: 365px;
+        color: white;
+
+    }
+
+    #banner h1 {
+        margin-bottom: 30px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    #banner button {
+        margin: 30px -1px;
+        padding: 12px 60px;
+        color: white;
+        background-color: #10a310;
+        border: 0px;
+        border-radius: 3px;
+    }
+
+    .box1 {
+        height: 70px;
+        width: 70%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+
+    .box1 div {
+        height: 80%;
+        width: 50%;
+        margin-left: 5px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .box1 div:first-child {
+        background-color: #10a310;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+</style>
+<style>
+    .box2 {
+        height: auto;
+        width: 80%;
+        background-color: #f5f5f5;
+        margin: auto;
+        position: relative;
+        bottom: 30px;
+        z-index: -1;
+        border-radius: 10px;
+        padding-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    .box2>h2 {
+        font-weight: 500;
+        text-align: left;
+        margin: 30px;
+        color: gray;
+    }
+
+    .box2>p {
+        width: 60%;
+        margin-left: 20%;
+        color: gray;
+        margin-bottom: 35px;
+    }
+
+    .box2 img {
+        border-radius: 5px;
+    }
+
+    .box2 .two {
+        height: 300px;
+        width: 92%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .two .head {
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .two .para {
+        margin-bottom: 40px;
+        text-align: left;
+        color: gray;
+    }
+
+    .box2 a {
+        color: white;
+        background-color: #10a310;
+        text-decoration: none;
+        padding: 7px 70px;
+        float: left;
+        border-radius: 3px;
+    }
+</style>
+<style>
+    .gbg {
+        height: 400px;
+        width: 100%;
+    }
+
+    .gbg img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .gbg h1 {
+        position: relative;
+        bottom: 346px;
+        color: white;
+    }
+
+    .why {
+        width: 900px;
+        height: 640px;
+        margin: auto;
+        position: relative;
+        bottom: 310px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 40px 80px 0px 80px;
+
+
+    }
+
+    .why div {
+
+        text-align: left;
+
+    }
+
+    .why img {
+        width: 12%;
+        height: 15%;
+    }
+
+    .why .head {
+        font-weight: 600;
+        text-align: left;
+        margin: 10px 0px;
+    }
+
+    .why .para {
+        text-align: left;
+        color: gray;
+    }
+</style>
+<style>
+    #display {
+        width: 70%;
+        margin-top: 470px;
+    }
+
+    #display1 {
+        height: 750px;
+        width: 100%;
+        position: relative;
+        bottom: 250px;
+        z-index: -1;
+    }
+
+    .box3 {
+        height: 900px;
+        width: 36%;
+        margin: auto;
+        position: relative;
+        bottom: 741px;
+
+    }
+    .box3 .para{
+        color: gray;
+        margin: 20px 0px 35px 0px;
+    }
+    .inner{
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        
+    }
+    .inner div{
+        background-color: black;
+        color: white;
+        padding: 20px 30px;
+        text-align: left;
+        border-radius: 5px;
+
+    }
+    .inner img{
+        height: 50px;
+        margin-bottom: 80px;
+     
+    }
+    .inner h3{
+        text-align: left;
+    }
+</style>
+<style>
+    .box4{
+        height: 600px;
+      
+        width: 36%;
+        margin: auto;
+        position: relative;
+        bottom: 570px;
+    }
+    .box4 p{
+        margin-bottom: 40px;
+    }
+    .box4 p:first-child{
+        font-weight: 500;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    input{
+        font-size: 15px;
+        padding: 15px 5px;
+        text-align: left;
+        width: 44%;
+        margin: 10px 10px 20px 0px;
+        border:1px solid gray;
+        border-radius: 3px;
+    }
+    .box4 input:nth-child(5){
+        width: 95%;
+    }
+    .box4 p:nth-child(2){
+        margin-bottom: 50px;
+       color: gray;
+    }
+    input:nth-child(8){
+        height: 70px;
+        width: 95%;
+        padding-bottom: 50px;
+    }
+    #btn{
+           display: inline-block;
+           font-size: 15px;
+           padding: 5px 60px;
+           background-color:#a1f0a1;
+           color: white;
+           border: none;
+    }
+</style>
+<style>
+    .box5{
+        height: 350px;
+        width: 100%;
+        border-top: 18px solid #10a310;
+        position: relative;
+        bottom: 400px;
+        background-color: black;
+        color: white;
+        padding-top: 80px;
+        font-size: 20px;
+    }
+    .box5 img{
+        height: 25px;
+        margin-bottom: 20px;
+        
+    }
+    .box5 p:nth-child(2){
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
     
+</style>
+
+<body>
+    <div id="navbar">
+        <div><img src="https://www.zoomcar.com/images/zms-logo-white.png" alt=""></div>
+        <div>
+            <button>Request Demo</button>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="/exuberant-chicken-538/image/banner.png" alt="">
+        <div>
+            <h1>Inspiring Profitable Mobility Solutions of Tomorrow</h1>
+            <p>Suite of Connected Technology Offerings and Connected Mobility Solutions for Businesses Worldwide</p>
+            <button>Request Demo</button>
+        </div>
+
+    </div>
+    <h1>Product Offerings</h1>
+    <div class="box1">
+        <div>
+            <h4>Connected Vehicle Solutions</h4>
+        </div>
+        <div>
+            <h4>Yield Management Services</h4>
+        </div>
+    </div>
+    <div class="box2">
+        <p>All-in-one solution to reduce operating costs over 30% via advanced vehicle monitoring and management systems
+        </p>
+        <img src="https://www.zoomcar.com/assets/component-images/ZMS_Slide-Banner_201_C.c9d9a766c44e0796bce6e3bdcc65d589.jpg"
+            alt="">
+        <h2>FEATURES</h2>
+        <div class="two">
+            <div>
+                <p class="head">Vehicle Tracking & Safety</p>
+                <p class="para">Geo-fencing, Real time alerts, immobilization to manage 24x7</p>
+                <p class="head">Fuel Management</p>
+                <p class="para">Real time fuel level monitoring and fuel theft detection mechanisms</p>
+                <a
+                    href="https://zoomcar.s3.ap-southeast-1.amazonaws.com/ZS-Zoomcar-Mobility-Services-ZMS-Subscription02">More
+                    Details</a>
+            </div>
+            <div>
+                <p class="head">Driver Score</p>
+                <p class="para">Improved fuel efficiency and cost benefits from better driving behavior</p>
+                <p class="head">Operations Automation </p>
+                <p class="para">Automate routine operational tasks and increase uptime over 25%</p>
+            </div>
+            <div>
+                <p class="head">Vehicle Health Monitoring</p>
+                <p class="para">Real-time Asset health monitoring systems for reduced downtime</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gbg">
+        <img src="https://www.zoomcar.com/assets/component-images/bound@2x.476261040c66e2e84987563e0b955b44.jpg" alt="">
+        <h1>Why Partner with Us?</h1>
+        <div class="why">
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-timer-new.png" alt="">
+                <p class="head">Quick Go-To Market</p>
+                <p class="para">Quick and easy onboarding with a fast turnaround time of one week</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-car-new.png" alt="">
+                <p class="head">India’s largest B2C Mobility Platform</p>
+                <p class="para">Fleet management experience of managing 20,000+ assets</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-remote-new.png" alt="">
+                <p class="head">
+                    Works Across Vehicle Types
+                </p>
+                <p class="para">Works seamlessly across - 2W, 3W, Cars, Trucks & Electric Vehicles alike</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-table-new.png" alt="">
+                <p class="head">Advanced Data Science Capabilities</p>
+                <p class="para">Self-learning algorithms powered by Artificial Intelligence & Machine Learning to
+                    predict driver behaviour</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-license-new.png" alt="">
+                <p class="head">Commitment to Customer Satisfaction</p>
+                <p class="para">24x7 dedicated assistance and support system</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-delivery-green-new.png" alt="">
+                <p class="head">Pioneer in Shared subscription</p>
+                <p class="para">Innovative techniques to enable 2-sided marketplaces for better utilisation & revenue
+                </p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-setting-green-new.png" alt="">
+                <p class="head">Proven Next Gen Technology</p>
+                <p class="para">Best in class stable and scalable tech solutions</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-distance-new.png" alt="">
+                <p class="head">Futuristic Products</p>
+                <p class="para">Always in sync with the evolving business landscape</p>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-office-new.png" alt="">
+                <p class="head">Powering Multiple Sectors</p>
+                <p class="para">Partners range from Government bodies to Global companies across varied geographies</p>
+            </div>
+
+
+        </div>
+    </div>
+    <img id="display"
+        src="https://www.zoomcar.com/assets/component-images/dashboard@2x.a2445440373cd84df21b0d887b8d389f.png" alt="">
+    <img id="display1"
+        src="https://www.zoomcar.com/assets/component-images/rectangle.e2190cd211f285fb86e5c7809c0f7b42.jpg" alt="">
+    <div class="box3">
+        <h1>Proven track records</h1>
+        <p class="para" >Backed by deep learnings and great driving experiences brought to you over 1 billion+ kms spanning over 7
+            years</p>
+        <div class="inner" >
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-fuel-fuel-type.png" alt="">
+                <h3>30% Fuel Costs Savings</h3>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-swap.png" alt="">
+                <h3>20% Reduction in Fleet Downtime
+                </h3>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-car-pick-up.png" alt="">
+                <h3>50% Less Accidents & Better Safety</h3>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-deposit.png" alt="">
+                <h3>25% Maintenance Cost Reduction</h3>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-ruppee.png" alt="">
+                <h3>15% Revenue Uplift</h3>
+            </div>
+            <div>
+                <img src="https://www.zoomcar.com/images/icons-arrows-arrow-right-top.png" alt="">
+                <h3>Increase in sales funnel conversion and utilisation</h3>
+            </div>
+            
+        </div>
+    </div>
+    <div class="box4">
+        <p >Connect With Us</p>
+        <p>Leave details for us to help your business become future <br> ready</p>
+        <input type="text" name="" id="" placeholder="Name" >
+        <input type="text" name="" id="" placeholder="Company Names" >
+        <input type="text" name="" id=""    placeholder="Email">
+        <input type="text" placeholder="Phone Number" >
+        <input type="text" name="" id=""   placeholder="Country" >
+        <input type="" name="" id="" placeholder="Mention Requirements" >
+        <br>
+        <button id="btn" >Submit</button>
+    </div>
+
+    <div class="box5">
+        <p>For more information, connect with us at
+            <p>zms.contact@zoomcar.com</p>
+            <img src="https://www.zoomcar.com/assets/component-images/zms-logo-white.2af37707ebe1f0942fd6285bb0fdf3d9.png" alt="">
+            <p>ⓒ 2020 Zoomcar | All Rights Reserved</p>
+        </p>
+    </div>
+
 </body>
+
 </html>
