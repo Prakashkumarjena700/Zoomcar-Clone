@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="/exuberant-chicken-538/image/icon-removebg-preview.png">
+    <title>Zoomcar Home - Zoomcar</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+    }
+
+    #navbar {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    }
+
+    #end {
+
+        height: 40px;
+        padding-bottom: 5px;
+        font-weight: 400;
+    }
+
+    #end img {
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 15px;
+
+    }
+
+    #navbar a {
+        margin-left: 30px;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    #navbar a:hover{
+        color: #17a31a;
+        text-decoration: underline;
+    }
+
+    #navbar a:nth-child(5) {
+        color: white;
+        background-color: #5cb85c;
+        padding: 10px 20px 7px 20px;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+
+    #box1 {
+        height: 500px;
+        width: 100%;
+
+        background-color: #f4fbf4;
+        display: flex;
+        padding-left: 20px;
+    }
+
+    #box1>div {
+
+        height: 74%;
+        width: 45%;
+        display: inline-block;
+        margin-top: 124px;
+    }
+
+    #box1>div:last-child {
+        width: 32%;
+        margin-left: 12%;
+    }
+
+    .cer {
+
+        border-radius: 50%;
+        background: linear-gradient(to right bottom, #d8f0d8, #fbfefb);
+    }
+
+    h1 {
+        margin: 20px 0px;
+        font-size: 50px;
+        font-weight: 500;
+    }
+
+    button {
+        margin: 30px 0px;
+        background-color: #5cb85c;
+        border: 0px;
+        padding: 10px 25px;
+        color: white;
+        border-radius: 3px;
+    }
+
+    #box2 {
+        height: auto;
+        width: 100%;
+
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .mid {
+        font-size: 20px;
+        margin: 40px 0px 10px 10px;
+    }
+
+    .inner {
+
+        display: flex;
+    }
+
+    .inner div {
+
+        height: 100%;
+        width: 50%;
+    }
+
+    .inner div:first-child {
+        width: 42%;
+
+    }
+
+    .inner div:last-child {
+        width: 58%;
+        line-height: 26px;
+        padding-left: 10px;
+    }
+
+    .inner img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .head {
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    .fet {
+        background-color: rgb(230, 230, 230);
+        padding: 3px 10px;
+        border-radius: 16px;
+        font-size: 10px;
+        color: gray;
+
+    }
+
+    .clog {
+        color: gray;
+        font-weight: 400;
+    }
+</style>
+<style>
+    hr {
+        margin: 60px 0px;
+    }
+
+    #box3 {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+    }
+
+    #box3>div:first-child {
+        height: 100%;
+        width: 60%;
+
+        display: grid;
+    }
+
+    #box3>div:last-child {
+        height: 100%;
+        width: 40%;
+
+        line-height: 35px;
+        padding-left: 15px;
+    }
+
+    .box {
+        display: flex;
+    }
+
+    .box div:first-child {
+        height: 100%;
+        width: 70%;
+        margin-bottom: 30px;
+        padding-left: 10px;
+    }
+
+    .box div:last-child {
+        height: 100%;
+        width: 30%;
+    }
+
+    .box img {
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    .para {
+        color: gray;
+        margin: 7px 0px 15px 0px;
+    }
+
+    .head {
+        margin-top: 7px;
+    }
+
+    .date {
+        margin: 15px 0px;
+        color: gray;
+    }
+
+    .fet1 {
+        background-color: rgb(230, 230, 230);
+        padding: 5px 20px;
+        border-radius: 20px;
+        color: gray;
+        font-size: 13px;
+        font-weight: 400;
+        margin-left: 5px;
+    }
+
+    #last img {
+        margin-top: 30px;
+        height: 312px;
+        width: 62%;
+    }
+
+    #last p {
+        margin-bottom: 10px;
+    }
+
+    .one {
+
+        margin-top: 40px;
+        margin-left: 333px;
+    }
+
+    #colg {
+        color: #5cb85c;
+    }
+
+    #box4 {
+        height: auto;
+        width: 100%;
+        padding-left: 15px;
+        margin-top: 150px;
+        display: flex;
+        background-color: black;
+        color: white;
+    }
+
+    #box4>div {
+        height: 100%;
+        width: 25%;
+   
+        padding-top: 60px;
+    }
+
+    #box4>div h3 {
+        margin: 15px 0px;
+    }
+
+    .search{
+        height: 50px;
+        border: 1.5px solid #17a31a;
+        border-right: 40px solid #17a31a;
+        margin-top: 30px;
+        border-radius: 30px;
+        margin-bottom: 100px;
+        width: 90%;
+    }
+    #box4 span{
+        font-size: 13px;
+        color: gray;
+        
+    }
+    #finish{
+        height: 90px;
+        width: 100%;
+        border-top: 1px solid gray;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-weight: 400;
+        color: gray;
+        font-size: 14px;
+        padding-top: 30px;
+    }
+    #box4 p{
+        font-weight: 300;
+    }
+</style>
+
+<body>
+    <div id="navbar">
+        <div id="start">
+            <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" alt="">
+        </div>
+        <div id="end">
+            <a href="/exuberant-chicken-538/home.html">Book Now</a>
+            <a href="/exuberant-chicken-538/home.html">Offers</a>
+            <a href="/exuberant-chicken-538/home.html">Refer & Earn</a>
+            <a href="/exuberant-chicken-538/home.html">Blog</a>
+            <a href="/exuberant-chicken-538/home.html">BOOK NOW</a>
+            <img src="data:image/png;base64,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"
+                alt="">
+        </div>
+    </div>
+    <div id="box1">
+        <div>
+            <h1>Stay curious.</h1>
+            <div class="para">
+
+                <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+                <button>GET STARTED</button>
+            </div>
+        </div>
+        <div class="cer"></div>
+    </div>
+    <p class="mid">Trending On Zoomcar​</p>
+    <div id="box2">
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Road-trip-tricks-300x157.jpg" alt="">
+            </div>
+            <div>
+                <p class="head">Hacks For A Seamless Road Trip</p>
+                <span class="fet">LIFRSTYLE</span>
+                <span class="fet">MARKETING</span>
+                <br>
+                <span class="fet" id="sid">SELF DRIVE CAR</span>
+                <br>
+                <span class="clog">June 7, 2022</span><span class="clog"> &nbsp; | 4:51</span>
+            </div>
+        </div>
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Cars-perfect-for-monsoon-300x157.jpg"
+                    alt="">
+            </div>
+            <div>
+                <p class="head">Monsoon Trips Made Easy</p>
+                <span class="fet">LIFRSTYLE</span>
+                <span class="fet">MARKETING</span>
+                <br>
+                <span class="fet" id="sid">SELF DRIVE</span>
+                <br>
+                <span class="clog">May 29, 2022</span><span class="clog"> &nbsp; | 9:51</span>
+            </div>
+        </div>
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Cars-for-all-road-trips-300x157.jpg"
+                    alt="">
+            </div>
+            <div>
+                <p class="head">Made For The Toughest Roads</p>
+                <span class="fet">EDUCATION</span>
+                <span class="fet">LIFESTYLE</span>
+                <span class="fet" id="sid">TRAVEL</span>
+                <br>
+                <span class="clog">May 29, 2022</span><span class="clog"> &nbsp; | 9:51</span>
+            </div>
+        </div>
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Types-of-car-in-road-trips-300x157.jpg"
+                    alt="">
+            </div>
+            <div>
+                <p class="head">The Most Comforting Wheels</p>
+                <span class="fet">EDUCATION</span>
+                <span class="fet">LIFESTYLE</span>
+                <br>
+                <span class="fet" id="sid">SELF DRIVE CAR</span>
+                <br>
+                <span class="clog">May 29, 2022</span><span class="clog"> &nbsp; | 9:51</span>
+            </div>
+        </div>
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Places-worth-the-visit-in-India-300x157.jpg"
+                    alt="">
+            </div>
+            <div>
+                <p class="head">Give Wheels To Your Weekend</p>
+                <span class="fet">FEATURED</span>
+                <span class="fet">MUST VISITS</span>
+                <br>
+                <span class="fet" id="sid">POPULAR DESTINATIONS</span>
+                <br>
+                <span class="clog">May 29, 2022</span><span class="clog"> &nbsp; | 9:51</span>
+            </div>
+        </div>
+        <div class="inner">
+            <div>
+                <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/04/Couple-get-away-guide-300x169.jpg"
+                    alt="">
+            </div>
+            <div>
+                <p class="head">Romance Has A New Address</p>
+                <span class="fet">MUST VISITS</span>
+                <span class="fet">POPULAR DESTINATIONS</span>
+
+                <span class="fet" id="sid">TRAVEL</span>
+                <br>
+                <span class="clog">May 29, 2022</span><span class="clog"> &nbsp; | 9:51</span>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div id="box3">
+        <div>
+            <div class="box">
+                <div>
+                    <p class="head">Family That Drives Together, Stays Together</p>
+                    <p class="para">Road journeys are one of the finest ways to satisfy your desire</p>
+                    <span class="fet">LIFESTYLE</span>
+                    <span class="fet">TRAVEL</span>
+                    <span class="fet">ZOOMCAR DIARIES</span>
+                    <p class="date">May 23, 2022 | 4:24 </p>
+                </div>
+                <div>
+                    <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/best-rentals-for-families-300x169.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <p class="head">Hottest Wheels For A Great First Impression</p>
+                    <p class="para">Are you planning a business trip in the coming week? How about</p>
+                    <span class="fet">FEATURED</span>
+                    <span class="fet">LIFESTYLE</span>
+                    <span class="fet">SELF DRIVE CAR</span>
+                    <p class="date">May 23, 2022 | 4:24 </p>
+                </div>
+                <div>
+                    <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/rental-car-for-your-next-business-trip-300x169.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <p class="head">Feeling Nawabi? Say Aadab to Galouti</p>
+                    <p class="para">Everyone needs to take a break sometimes. To keep stress levels in</p>
+                    <span class="fet">MUST VISITS</span>
+                    <span class="fet">NORTH INDIA</span>
+                    <span class="fet">POPULAR DESTINATIONS</span>
+                    <p class="date">May 23, 2022 | 4:24 </p>
+                </div>
+                <div>
+                    <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Trekking-in-Lucknow-300x157.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <p class="head">Bengaluru Weather Is Here To Charm You, Macha!</p>
+                    <p class="para">Everyone needs to take a break once in a while to declutter</p>
+                    <span class="fet">MARKRTING</span>
+                    <span class="fet">POPULAR DESTINATIONS</span>
+                    <span class="fet">SOUTH INDIA</span>
+                    <p class="date">May 23, 2022 | 4:24 </p>
+                </div>
+                <div>
+                    <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/05/Trekking-in-bangalore-300x157.jpg"
+                        alt="">
+                </div>
+            </div>
+            <p class="one">« Previous <span id="colg">1 2 3 4 5 Next »</span></p>
+
+
+        </div>
+        <div id="last">
+            <p class="hed">DISCOVER MORE OF WHAT MATTERS TO YOU</p>
+            <span class="fet1">BUSINESS</span>
+            <span class="fet1">COVID-19</span>
+            <span class="fet1">EAST INDIA</span>
+            <span class="fet1">EDUCATION</span>
+            <span class="fet1">FEATURED</span>
+            <span class="fet1">HOST</span>
+            <span class="fet1">LIFESTYLE</span>
+            <span class="fet1">LIVE AFTER5</span>
+            <span class="fet1">MARKETING</span>
+            <span class="fet1">MUST VISITS</span>
+            <span class="fet1">NEWS</span>
+            <span class="fet1">NORTH INDIA</span>
+            <span class="fet1">OFFEWS AND COUNTESTS</span>
+            <span class="fet1">POLICY UPDATE</span>
+            <br>
+            <span class="fet1">POPULAR DESTINATIONS</span>
+            <span class="fet1">SELF DRIVE</span>
+            <span class="fet1">SELF DRIVE CAR</span>
+            <span class="fet1">SOCIAL BUZZ</span>
+            <span class="fet1">SOUTH INDIA</span>
+            <span class="fet1">TECH BLOGS</span>
+            <span class="fet1">TRAVEL</span>
+            <span class="fet1">UNCATEGORIZED</span>
+            <span class="fet1">WEST INDIA</span>
+            <span class="fet1">ZAP-DRIVE,EARN & SHARE</span>
+            <span class="fet1">ZOOMCAR ANNUAL SALE</span>
+            <span class="fet1">ZOOMCAR DIARIES</span>
+            <br>
+            <span class="fet1">ZOOMCAR STORIES</span>
+            <br>
+            <img src="https://www.zoomcar.com/blog/wp-content/uploads/2022/06/placeholder-9-300x200.png" alt="">
+
+
+
+
+        </div>
+    </div>
+    <div id="box4">
+        <div>
+            <h3>Zoomcar Host</h3>
+            <p>Zoomcar Host is a community car-sharing program for private car owners to earn rewards and reduce
+                ownership costs by sharing their cars on the Zoomcar</p>
+        </div>
+        <div>
+            <h3>Explore</h3>
+            <p>Share & Earn <br>
+                Earnings calculator <br>
+                FAQ's</p>
+        </div>
+        <div>
+            <h3>Latest Posts</h3>
+            <p>Hacks For A Seamless Road Trip</p>
+            <span>June 7, 2022</span>
+            <p>Monsoon Trips Made Easy</p>
+            <span>May 29, 2022</span>
+        </div>
+        <div>
+            <h3>Newsletter</h3>
+            <p>Subscribe to our email list, we hate spam.</p>
+            <div class="search" ></div>
+        </div>
+    </div>
+    <div id="finish">
+        <p>© 2022, Zoomcar. All rights reserved</p>
+    </div>
+</body>
+
+</html>
